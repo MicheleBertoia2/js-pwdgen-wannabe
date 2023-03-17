@@ -10,10 +10,20 @@
 
 const name = prompt('Inserisci Nome');
 
-console.log('name',name);
 
 const surname = prompt('Inserisci Cognome');
 
 const favColour = prompt('Qual è il tuo colore preferito?')
 
-console.log(name, surname, favColour);
+
+const pwdString= name + surname + favColour + '23'
+
+document.getElementById('pwdResult').innerHTML=`
+<div class="border text-bg-success text-center">
+  <p>
+    <strong>Fatto!</strong> <br>
+    La tua password totalmente sicura è ${pwdString}
+  </p>
+</div>
+
+`
